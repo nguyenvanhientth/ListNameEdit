@@ -1,0 +1,10 @@
+<h3>Top Names</h3>
+<div class="grid grid-pad">
+  <a *ngFor="let name of names" class="col-1-4"
+    routerLink="detail/{{name.id}} ">
+    <div class="module name">
+      <h4>{{name.name}} </h4>
+    </div>
+  </a>
+</div>
+<app-name-search></app-name-search>

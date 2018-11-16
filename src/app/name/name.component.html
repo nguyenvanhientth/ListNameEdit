@@ -1,0 +1,19 @@
+<h2>My ListName</h2>
+<ul class="heroes">
+  <li *ngFor="let name of names">
+    <a routerLink="/detail/{{name.id}} ">
+      <span class="badge">{{name.id}} </span>{{name.name}}
+    </a>
+    <button class="delete" title ="delete name"
+      (click)="delete(name)">Delete</button>
+  </li>
+</ul>
+
+<div>
+  <label>Name: 
+    <input type="text" #Name>
+  </label>
+  <button (click)="add(Name.value); Name.value = ''" >
+    Add
+  </button>
+</div>
